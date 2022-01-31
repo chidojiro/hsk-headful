@@ -10,8 +10,10 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.3",
+    "@heroicons/react": "^1.0.5",
     "classnames": "^2.3.1",
-    "hsk-headless": "^1.0.3",
+    "hsk-headless": "^1.0.18",
     "lodash": "^4.17.21",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
