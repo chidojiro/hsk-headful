@@ -31,7 +31,7 @@ export const Items = ({ className, ...restProps }: Props) => {
       className={classNames('relative z-0 inline-flex -space-x-px rounded-md shadow-sm', className)}
       aria-label='Pagination'
       {...restProps}>
-      {items.map(({ page, disabled, selected, type, onClick }) => {
+      {items.map(({ page, disabled, selected, type, onClick }, idx) => {
         if (type === 'previous')
           return (
             <Item className='px-2 rounded-l-md' key={type} onClick={onClick}>
@@ -50,7 +50,7 @@ export const Items = ({ className, ...restProps }: Props) => {
 
         if (type === 'ellipsis')
           return (
-            <Item as='span' className='hover:bg-white'>
+            <Item as='span' className='hover:bg-white' key={'ellipsis' + idx}>
               ...
             </Item>
           );
